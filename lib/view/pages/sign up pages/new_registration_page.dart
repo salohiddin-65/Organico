@@ -13,6 +13,7 @@ class _NewRegistrationPageState extends State<NewRegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       /////////////////////////////////////////////////////// BODY ///////////////////////////////////////////////////////
       body: SafeArea(
         child: SingleChildScrollView(
@@ -239,14 +240,16 @@ class _NewRegistrationPageState extends State<NewRegistrationPage> {
                                   RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(100.0),
-                                  side: const BorderSide(color: Colors.red),
+                                  side: const BorderSide(
+                                    color: Color.fromRGBO(170, 0, 35, 1),
+                                  ),
                                 ),
                               ),
                             ),
                             onPressed: () {},
                             child: const Padding(
                               padding: EdgeInsets.symmetric(vertical: 15.0),
-                              child: Text("Sign In"),
+                              child: Text("Sign Up"),
                             ),
                           ),
                         ),
@@ -284,7 +287,7 @@ class _NewRegistrationPageState extends State<NewRegistrationPage> {
                             onPressed: () {},
                             child: const Padding(
                               padding: EdgeInsets.symmetric(vertical: 15.0),
-                              child: Text("Sign In"),
+                              child: Text("Sign Up with Google"),
                             ),
                           ),
                         ),

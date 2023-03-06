@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class ForgotPasswordPage extends StatefulWidget {
-  const ForgotPasswordPage({super.key});
+class PhoneNumberPage extends StatefulWidget {
+  const PhoneNumberPage({super.key});
 
   @override
-  State<ForgotPasswordPage> createState() => _ForgotPasswordPageState();
+  State<PhoneNumberPage> createState() => _PhoneNumberPageState();
 }
 
-class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
+class _PhoneNumberPageState extends State<PhoneNumberPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      /////////////////////////////////////////////////////// BODY ///////////////////////////////////////////////////////
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -29,7 +30,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       child: Icon(Icons.keyboard_arrow_left_outlined),
                     ),
                     Text(
-                      "Forgot Password",
+                      "OTAC Number",
                       style: TextStyle(
                         color: Color.fromRGBO(23, 23, 37, 1),
                         fontWeight: FontWeight.w700,
@@ -40,22 +41,14 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 ),
               ),
               const SizedBox(
-                height: 45.0,
-              ),
-              Center(
-                child: SvgPicture.asset("assets/Forgot Illustration.svg"),
-              ),
-              const SizedBox(
-                height: 45.0,
+                height: 50.0,
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      "Enter your phone number",
+                      "Enter Authorization Code",
                       style: TextStyle(
                         color: Color(0xff171725),
                         fontWeight: FontWeight.w700,
@@ -63,10 +56,10 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 16.0,
+                      height: 15.0,
                     ),
                     const Text(
-                      "We need to verify you. We will send you a one-time authorization code. ",
+                      "We have sent SMS to:",
                       style: TextStyle(
                         color: Color(0xff92929D),
                         fontWeight: FontWeight.w400,
@@ -74,26 +67,47 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 30.0,
+                      height: 5.0,
+                    ),
+                    const Text(
+                      "+1 (XXX) XXX-X120",
+                      style: TextStyle(
+                        color: Color(0xff171725),
+                        fontWeight: FontWeight.w700,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 40.0,
                     ),
                     TextFormField(
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(100.0),
+                          borderRadius: BorderRadius.circular(100.0),
+                        ),
+                        labelText: "6 Digit Code",
+                        labelStyle: const TextStyle(
+                          color: Color(0xff92929D),
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16.0,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 24.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        Text(
+                          "Resend Code",
+                          style: TextStyle(
+                            color: Color(0xff2ECC71),
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16.0,
                           ),
                         ),
-                        // labelText: "Password",
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.only(left: 16.0, right: 10.0),
-                          child: Icon(Icons.lock_outline_sharp),
-                        ),
-                        suffixIcon: Padding(
-                          padding: EdgeInsets.only(right: 10.0),
-                          child: Icon(Icons.remove_red_eye_outlined),
-                        ),
-                        labelText: "Your Phone Number",
-                      ),
+                      ],
                     ),
                     const SizedBox(
                       height: 30.0,
@@ -109,7 +123,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                               MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(100.0),
-                              side: const BorderSide(color: Colors.red),
+                              side: const BorderSide(
+                                color: Color.fromRGBO(170, 0, 35, 1),
+                              ),
                             ),
                           ),
                         ),

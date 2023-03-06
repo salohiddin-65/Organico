@@ -12,6 +12,7 @@ class _HomePageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       /////////////////////////////////////////////////////// BODY ///////////////////////////////////////////////////////
       body: SafeArea(
         child: SingleChildScrollView(
@@ -125,7 +126,9 @@ class _HomePageState extends State<SignInPage> {
                                 RoundedRectangleBorder>(
                               RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(100.0),
-                                side: const BorderSide(color: Colors.red),
+                                side: const BorderSide(
+                                  color: Color.fromRGBO(170, 0, 35, 1),
+                                ),
                               ),
                             ),
                           ),
