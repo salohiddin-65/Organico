@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:organico_real/view/home_page.dart';
+import 'package:organico_real/view/pages/new_registration_page.dart';
+import 'package:organico_real/view/pages/sign_in_page.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: NewRegistrationPage(),
     );
   }
 }
