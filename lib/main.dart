@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:organico_real/view/pages/forgot_password_page.dart';
 import 'package:organico_real/view/pages/new_registration_page.dart';
 import 'package:organico_real/view/pages/sign_in_page.dart';
 
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: NewRegistrationPage(),
+      home: ForgotPasswordPage(),
     );
   }
 }

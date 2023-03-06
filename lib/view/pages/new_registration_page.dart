@@ -8,6 +8,8 @@ class NewRegistrationPage extends StatefulWidget {
 }
 
 class _NewRegistrationPageState extends State<NewRegistrationPage> {
+  bool firstvalue = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,6 +74,7 @@ class _NewRegistrationPageState extends State<NewRegistrationPage> {
                         const SizedBox(
                           height: 10.0,
                         ),
+                        /////////////////////////////////////////////////////// TEXT FORM FIELD - 1 ///////////////////////////////////////////////////////
                         TextFormField(
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(
@@ -95,6 +98,195 @@ class _NewRegistrationPageState extends State<NewRegistrationPage> {
                         ),
                         const SizedBox(
                           height: 16.0,
+                        ),
+                        const Text(
+                          "Password",
+                          style: TextStyle(
+                            color: Color(0xff92929D),
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        /////////////////////////////////////////////////////// TEXT FORM FIELD - 2 ///////////////////////////////////////////////////////
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.red),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(100.0),
+                              ),
+                            ),
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.only(right: 5.0),
+                              child: Icon(Icons.remove_red_eye_outlined),
+                            ),
+                            prefixStyle: TextStyle(
+                              color: Color(0xff92929D),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16.0,
+                            ),
+                            labelText: "Password",
+                            labelStyle: TextStyle(
+                              color: Color(0xff92929D),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 16.0,
+                        ),
+                        const Text(
+                          "Password Confirmation",
+                          style: TextStyle(
+                            color: Color(0xff92929D),
+                            fontWeight: FontWeight.w700,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        /////////////////////////////////////////////////////// TEXT FORM FIELD - 3 ///////////////////////////////////////////////////////
+                        TextFormField(
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.red),
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(100.0),
+                              ),
+                            ),
+                            suffixIcon: Padding(
+                              padding: EdgeInsets.only(right: 5.0),
+                              child: Icon(Icons.remove_red_eye_outlined),
+                            ),
+                            prefixStyle: TextStyle(
+                              color: Color(0xff92929D),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16.0,
+                            ),
+                            labelText: "Password Confirmation",
+                            labelStyle: TextStyle(
+                              color: Color(0xff92929D),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: firstvalue,
+                              checkColor: Colors.white,
+                              activeColor: Colors.green,
+                              onChanged: (value) {
+                                setState(() {
+                                  firstvalue = value!;
+                                });
+                              },
+                            ),
+                            const Text(
+                              "I accept the",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16.0,
+                                color: Color(0xff171725),
+                              ),
+                            ),
+                            const Text(
+                              "Terms of Use",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16.0,
+                                color: Color(0xff2ECC71),
+                              ),
+                            ),
+                            const Text(
+                              "and",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16.0,
+                                color: Color(0xff171725),
+                              ),
+                            ),
+                            const Text(
+                              "Privacy Policy",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16.0,
+                                color: Color(0xff2ECC71),
+                              ),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 35.0,
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                const Color.fromRGBO(170, 0, 35, 1),
+                              ),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(100.0),
+                                  side: const BorderSide(color: Colors.red),
+                                ),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 15.0),
+                              child: Text("Sign In"),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        const Center(
+                          child: Text(
+                            "or use",
+                            style: TextStyle(
+                              color: Color(0xff92929D),
+                              fontWeight: FontWeight.w400,
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        SizedBox(
+                          width: double.infinity,
+                          child: ElevatedButton(
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                Colors.transparent.withOpacity(0.0),
+                              ),
+                              shape: MaterialStateProperty.all<
+                                  RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(100.0),
+                                  side: const BorderSide(color: Colors.grey),
+                                ),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: const Padding(
+                              padding: EdgeInsets.symmetric(vertical: 15.0),
+                              child: Text("Sign In"),
+                            ),
+                          ),
                         ),
                       ],
                     ),
