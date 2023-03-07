@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:organico_real/view/pages/bottom%20pages/detail_page.dart';
 import 'package:organico_real/view/pages/bottom%20pages/home_screen_page.dart';
+import 'package:organico_real/view/pages/bottom%20pages/my_add_page.dart';
 import 'package:organico_real/view/pages/sign%20up%20pages/forgot_password_page.dart';
 import 'package:organico_real/view/pages/sign%20up%20pages/new_registration_page.dart';
 import 'package:organico_real/view/pages/sign%20up%20pages/phone_number_page.dart';
@@ -23,7 +25,7 @@ class _MyAppState extends State<MyApp> {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       // theme: ThemeData(primarySwatch: Colors.blue, canvasColor: Colors.green),
-      home: HomeScreenPage(),
+      home: MyAddPage(),
     );
   }
 }
